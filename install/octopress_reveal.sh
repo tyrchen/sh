@@ -17,7 +17,7 @@ trap "echo Installation failed." EXIT
 
 echo "downloading..."
 if [ "$UNAME" = "Darwin" ] ; then
-	curl --progress-bar $URL | tar -C "$TARGET" -xzf -
+	curl $URL | tar -C "$TARGET" -xzf -
 elif [ "$UNAME" = "Linux" ] ; then
 	curl -# -O $URL | tar -C "$TARGET" -xzf -
 fi
