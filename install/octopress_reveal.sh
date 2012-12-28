@@ -2,7 +2,7 @@
 
 UNAME=`uname`
 URLBASE="http://sh.tchen.me"
-URL="$URLBASE/downloads/octopress_revealjs.tgz"
+URL="$URLBASE/downloads/octopress_reveal.tgz"
 DIFFFILE="rakefile.diff"
 SLIDEDIR="source/slides"
 TARGET="."
@@ -24,6 +24,7 @@ fi
 
 patch -p0 < rakefile.diff
 mkdir "$SLIDEDIR"
+rm rakefile.diff
 
 cat <<EOF
 
